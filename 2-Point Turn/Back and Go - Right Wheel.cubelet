@@ -1,0 +1,75 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="cubelets_setup" id="2" deletable="false" x="-287" y="-37">
+    <statement name="setup_do">
+      <block type="variables_set" id="KU{]Hl6_=vDs~3y?[x]=">
+        <field name="VAR">speed</field>
+        <value name="VALUE">
+          <block type="math_number" id="~=8P|Cq;*!Cr+MSzng`y">
+            <field name="NUM">150</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="cubelets_loop" id="5" deletable="false" x="-286" y="93">
+    <statement name="loop_do">
+      <block type="controls_if" id="DyU|dFdrUEy8#;gE?O]N">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="ktqWQL4`9qp_HV|nZK6E">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="get_block_value" id="9/QZfm=LJ@|{,t7bK![f">
+                <value name="ID">
+                  <block type="math_number" id="IqZoN4%~j@A8ctEwsP~)">
+                    <field name="NUM">379281</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="560/@V!ppwH4U3R?t+%~">
+                <field name="NUM">200</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="set_direction_forward" id="7MeN=e9Ud0ur.u~EmJz?">
+            <next>
+              <block type="set_actuator_value" id="vWSff085S3Vjtk?P-ve%">
+                <value name="actuator_value">
+                  <block type="variables_get" id="6sZ]9qCE4dm*sGMPJ`?{">
+                    <field name="VAR">speed</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="set_direction_reverse" id="0JbXZ6IP|6l#~M|qAh^4">
+            <next>
+              <block type="set_actuator_value" id=")40AV=tRg.KVRWgCDTfY">
+                <value name="actuator_value">
+                  <block type="math_number" id="9J#`wEeLsF(Us7{,1=t]">
+                    <field name="NUM">30</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="time_delay" id="S4Ah:W.n^mq[R;[bIE%H">
+                    <value name="DELAY_TIME_MILI">
+                      <block type="math_number" id="tseUV#`ul#3k.T#;yxGr">
+                        <field name="NUM">2000</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
