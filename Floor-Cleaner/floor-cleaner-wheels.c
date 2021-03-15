@@ -10,7 +10,7 @@ void setup() {
 void loop() {
 
     //Get the sensor values
-    int sensor_front = get_block_value(379288);
+    int sensor_front = get_block_value(379281);
     int sensor_back = get_block_value(1705204);
 
     //Change direction if we get close to a wall.
